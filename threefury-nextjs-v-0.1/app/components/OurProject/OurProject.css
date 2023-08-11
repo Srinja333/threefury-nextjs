@@ -1,0 +1,15 @@
+.textS{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.textH{
+    margin-bottom: 1.5rem;
+}
+.text-color{
+    color: rgb(228, 95, 58);
+}
+
+.container{
+    margin-bottom: 50px;
+}

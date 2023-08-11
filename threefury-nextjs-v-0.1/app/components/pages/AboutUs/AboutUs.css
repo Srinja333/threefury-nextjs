@@ -1,0 +1,124 @@
+.btn-pink-rounded {
+  background-color: #e636b4 !important;
+  border-radius: 25px !important;
+}
+
+.btn-pink-rounded:hover {
+  background-color: blueviolet !important;
+}
+
+.sub-title {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  -webkit-text-fill-color: grey;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.process-wrapp>.service-heading {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.process-wrapp {
+  text-align: center;
+  cursor: pointer;
+}
+
+.process-wrapp>.pro-step {
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  transition: transform 1s ease-in-out;
+}
+
+.process-wrapp>.pro-step {
+  position: relative;
+  z-index: 1;
+}
+
+.process-wrapp>.pro-step.green {
+  background: #19c844;
+}
+
+.process-wrapp>.pro-step.blue {
+  background: #03a9f5;
+}
+
+.process-wrapp>.pro-step.purple {
+  background: #9556f5;
+}
+
+.process-wrapp>.pro-step.pink {
+  background: #f021b6;
+}
+
+.process-wrapp>.pro-step.midnight {
+  background: #41526b;
+}
+
+
+.pro-step:hover {
+  animation: heartBeat 1.6s infinite;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.team-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.team-item .team-image {
+  max-width: 250px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.team-item .name {
+  position: relative;
+}
+
+.owlItem{
+width:25%
+}
+
