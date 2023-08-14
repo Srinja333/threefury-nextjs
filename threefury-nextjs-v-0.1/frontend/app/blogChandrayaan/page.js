@@ -5,12 +5,14 @@ import icon from '../assets/chandrayaan.png'
 import '../styles/blogs.css';
 import ava from '../assets/avatar3.jpg'
 import Image from "next/image";
-
+import "../styles/MyHome.css"
 
 function blog1() {
   return (
     <div>
+    <div className='App'>
       <Navigation />
+      </div>
       <div class="blog-single gray-bg">
         <div class="container">
             <div class="row align-items-start">

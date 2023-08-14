@@ -5,12 +5,14 @@ import AI from '../assets/AI.jpg'
 import ava from '../assets/avatar.jpg'
 import '../styles/blogs.css';
 import Image from "next/image";
-//import './styles/MyHome.css'
+import "../styles/MyHome.css"
 
 function BlogAI() {
   return (
     <div>
+      <div className='App'>
       <Navigation />
+      </div>
       <div className="blog-single gray-bg">
         <div className="container">
             <div className="row align-items-start">
