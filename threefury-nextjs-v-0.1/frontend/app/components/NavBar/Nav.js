@@ -49,7 +49,7 @@ const Nav = () => {
       <a className="nav-link" onClick={() => {window.location.replace("/#modal-contact-form-data"); setVisible(false)}} href="#">Contact Us</a>
     </li>
     <li>
-    <button type="button" onClick={() => {window.location.replace("/#modal-contact-form-data"); setVisible(false)}} className="ms-md-3 btn-hover-1-copy color-1" href="12"><span>Get a Quote</span></button></li>  
+    <button type="button" onClick={() => {window.location.replace("/#modal-contact-form-data"); setVisible(false)}} className="mt-md-2 ms-md-3 btn-hover-1-copy color-1" href="12"><span>Get a Quote</span></button></li>  
 </ul>
       
     </div>
