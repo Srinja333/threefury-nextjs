@@ -1,6 +1,10 @@
 /* .just-cont{
     
 } */
+
+/*************** Home Section  **************************/
+
+/**********************************************************/
 .App {
     text-align: center;
   }
@@ -128,12 +132,12 @@
   .contact-form .form-group:nth-last-child(1){
     margin-bottom: 0;
   }
-  .quote-content .contact-form .form-control{
+  /* .quote-content .contact-form .form-control{
     border: none;
     border-bottom: 1px solid #d4d4d4;
     border-radius: 0;
     padding: 0;
-  }
+  } */
   
   .btn-hover {
     width: 200px;
@@ -446,3 +450,36 @@
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+
+  /*************** Home Section  **************************/
+.just_cont{
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+.container-heading-hero{
+margin-top: 0rem;
+margin-bottom: 4rem;
+}
+textarea.form-control {
+  min-height: 183px;
+  resize: none;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.form-control{
+  border: none;
+  border-bottom: 1px solid #3d2f2f;
+  border-radius: 0;
+}
+@media (max-width: 768px) {
+  .container-heading-hero {
+    background-color: ;
+  }
+  .title-heading{
+    font-size: 1rem;
+  }
+  .dev-title{
+    font-size: 20px;
+  }
+}
