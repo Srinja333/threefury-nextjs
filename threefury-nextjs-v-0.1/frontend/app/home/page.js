@@ -1,6 +1,6 @@
 "use client"; 
 import { useState, useEffect } from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
 import Nav from "../components/NavBar/Nav";
 // import Navigation from "../../navbar";
 import {REACT_APP_API,REACT_APP_PUBLIC_KEY, REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID,REACT_APP_CUSTOMER_TEMPLATE_ID} from './constants'
@@ -142,17 +142,11 @@ function Home() {
       <div>
         <Nav />
       </div>
-      <div className="just-cont"
-   
-      >
-    
-          <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
-          <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4>
-        
-     
-  
-      </div>
       <div id="home" className="content">
+      <div className="container-heading-hero" >
+            <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
+            <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4>
+        </div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-12">
@@ -161,7 +155,7 @@ function Home() {
                   {/* <p>
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
                     <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4> */}
-                    <Image src={icon} alt="Image" className="ms-md-3 swing img-fluid ml-6 custom-img"  />
+                    <Image src={icon} alt="ThreeFury image" className="ms-md-3 swing img-fluid ml-6 custom-img"  />
                   {/* </p> */}
                 </div>
                 <div className="col-md-6 mb-19">
@@ -202,18 +196,18 @@ function Home() {
                             onChange={setContact}
                           />
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                           <input
                             className="form-control"
                             id="quote_type"
                             name="projectType"
-                            placeholder="Project type"
+                            placeholder="Business Detailes"
                             required=""
                             type="text"
                             value={type}
                             onChange={(e) => handleInput(e)}
                           />
-                        </div>
+                        </div> */}
                       </div>
 
                       {/* <!--Right Column--> */}
@@ -235,14 +229,14 @@ function Home() {
                             className="form-control"
                             id="quote_address"
                             name="userAddress"
-                            placeholder="Address"
+                            placeholder="Business Detailes"
                             required=""
                             type="text"
                             value={address}
                             onChange={(e) => handleInput(e)}
                           />
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                           <input
                             className="form-control"
                             id="quote_company-name"
@@ -253,7 +247,7 @@ function Home() {
                             value={companyName}
                             onChange={(e) => handleInput(e)}
                           />
-                        </div>
+                        </div> */}
                       </div>
 
                       {/* <!--Full Column--> */}
