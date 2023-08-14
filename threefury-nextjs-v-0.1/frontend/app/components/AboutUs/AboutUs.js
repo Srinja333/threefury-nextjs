@@ -1,5 +1,6 @@
 "use client";
 import "./AboutUs.css";
+import "../../styles/MyHome.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -65,7 +66,7 @@ function AboutUs() {
                   onClick={() =>
                     window.location.replace("/#modal-contact-form-data")
                   }
-                  className="btn btn-hover-1-copy color-1"
+                  className="btn-hover-1-copy color-1"
                 >
                   learn more
                 </button>

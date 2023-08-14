@@ -473,9 +473,9 @@ textarea.form-control {
   border-radius: 0;
 }
 @media (max-width: 768px) {
-  .container-heading-hero {
+  /* .container-heading-hero {
     background-color: ;
-  }
+  } */
   .title-heading{
     font-size: 1rem;
   }

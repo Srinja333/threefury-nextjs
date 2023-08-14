@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import Nav from "../components/NavBar/Nav";
 // import Navigation from "../../navbar";
-import {REACT_APP_API,REACT_APP_PUBLIC_KEY, REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID,REACT_APP_CUSTOMER_TEMPLATE_ID} from './constants'
+import {REACT_APP_API,REACT_APP_PUBLIC_KEY, REACT_APP_SERVICE_ID,REACT_APP_CUSTOMER_TEMPLATE_ID} from './constants'
 import icon from "../assets/contact-us-customer-support-concept-vector_prev_ui.png";
 import BlogHome from "../blogHome/page";
 import AboutUs from "../components/AboutUs/AboutUs";
@@ -20,10 +20,10 @@ function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
-  const [address, setAddress] = useState("");
-  const [companyName, setCompanyName] = useState("");
+  const [details, setDetails] = useState("");
+ // const [companyName, setCompanyName] = useState("");
   const [message, setMessage] = useState("");
-  const [type, setType] = useState("");
+  //const [type, setType] = useState("");
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const timeout = 3000;
@@ -46,14 +46,12 @@ function Home() {
   const handleInput = (e) => {
     if (e.target.name === "quoteName") {
       setName(e.target.value);
-    } else if (e.target.name === "projectType") {
-      setType(e.target.value);
-    } else if (e.target.name === "userEmail") {
+    }else if (e.target.name === "userEmail") {
       setEmail(e.target.value);
-    } else if (e.target.name === "userAddress") {
-      setAddress(e.target.value);
-    } else if (e.target.name === "quoteCompanyName") {
-      setCompanyName(e.target.value);
+    } else if (e.target.name === "userContact") {
+      setContact(e.target.value);
+    } else if (e.target.name === "userDetails") {
+      setDetails(e.target.value);
     } else if (e.target.name === "userMessage") {
       setMessage(e.target.value);
     }
@@ -61,27 +59,15 @@ function Home() {
 
   const handleSubmit = async () => {
     const serviceId = REACT_APP_SERVICE_ID;
-    const templateId = REACT_APP_TEMPLATE_ID;
     const customerTemplateId = REACT_APP_CUSTOMER_TEMPLATE_ID;
     try {
       setLoading(true);
-      // await emailjs.send(serviceId, templateId, {
-      //   Name: name,
-      //   Email: email,
-      //   Contact: contact,
-      //   Address: address,
-      //   Company: companyName,
-      //   Message: message,
-      //   Type: type,
-      // });
       await emailjs.send(serviceId, customerTemplateId, {
         Name: name,
         Email: email,
         Contact: contact,
-        Address: address,
-        Company: companyName,
+        Details: details,
         Message: message,
-        Type: type,
       });
     } catch (error) {
       console.log(error);
@@ -98,8 +84,7 @@ function Home() {
         contact === "" ||
         message === "" ||
         email === "" ||
-        address === "" ||
-        type === ""
+        details === ""
       ) {
         alert("please fill all fields");
         return;
@@ -113,9 +98,7 @@ function Home() {
           user_name: name,
           user_email: email,
           user_contact: contact,
-          user_address: address,
-          user_type: type,
-          user_company: companyName,
+          user_details: details,
           user_explaination: message,
         }),
       });
@@ -125,12 +108,12 @@ function Home() {
         await handleSubmit();
 
         setName("");
-        setAddress("");
-        setCompanyName("");
+        setDetails("");
+        // setCompanyName("");
         setContact("");
         setEmail("");
         setMessage("");
-        setType("");
+        //setType("");
       }
     } catch (error) {
       console.log("Error:", error);
@@ -187,7 +170,7 @@ function Home() {
                           <PhoneInput
                             className="input-phone-number form-control"
                             id="quote_contact"
-                            name="userPhone"
+                            name="userContact"
                             placeholder="Phone number"
                             required=""
                             type="text"
@@ -214,7 +197,7 @@ function Home() {
                       <div className="col-md-6">
                         <div className="form-group">
                           <input
-                            className="form-control"
+                            className="form-control mt-lg-0 mt-4"
                             id="quote_email"
                             name="userEmail"
                             placeholder="Email"
@@ -227,12 +210,12 @@ function Home() {
                         <div className="form-group">
                           <input
                             className="form-control"
-                            id="quote_address"
-                            name="userAddress"
+                            id="quote_details"
+                            name="userDetails"
                             placeholder="Business Detailes"
                             required=""
                             type="text"
-                            value={address}
+                            value={details}
                             onChange={(e) => handleInput(e)}
                           />
                         </div>
