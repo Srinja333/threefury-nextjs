@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import Navigation from '../components/NavBar/Nav'
 import 'bootstrap/dist/css/bootstrap.css';
@@ -8,6 +9,17 @@ import Image from "next/image";
 import "../styles/MyHome.css"
 
 function blog1() {
+    (function() {
+
+        if (window.history && window.history.pushState) {
+    
+            $(window).on('popstate', function() {
+          
+              //alert('Back button was pressed.');
+              window.location.reload()
+            });
+        }
+    })();
   return (
     <div>
     <div className='App'>

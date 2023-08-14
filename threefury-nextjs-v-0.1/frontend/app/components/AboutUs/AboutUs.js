@@ -72,7 +72,7 @@ function AboutUs() {
                 </button>
               </div>
               <div className="col-lg-6">
-                <div className="ms-lg-5 pt-4 mt-lg-0 pt-lg-0">
+                <div className="ms-lg-5 pt-4 mt-lg-0 pt-lg-0 swing img-fluid custom-img">
                   <Image
                     width={391.5}
                     height={260.812}

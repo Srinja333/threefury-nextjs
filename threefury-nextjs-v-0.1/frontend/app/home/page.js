@@ -15,6 +15,7 @@ import PhoneInput from "react-phone-number-input";
 // import './MyHome.css'
 //import { text } from "@fortawesome/fontawesome-svg-core";
 import Image from "next/image";
+// import { useRouter } from 'next/navigation'
 
 function Home() {
   const [name, setName] = useState("");
@@ -28,7 +29,10 @@ function Home() {
   const [visible, setVisible] = useState(false);
   const timeout = 3000;
   const API = REACT_APP_API;
-
+  // const router = useRouter();
+  // useEffect(()=>{
+  //  router.push('/')
+  // },[])
   useEffect(() => emailjs.init(REACT_APP_PUBLIC_KEY), []);
 
   useEffect(() => {

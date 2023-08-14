@@ -1,4 +1,5 @@
-//import React from 'react'
+"use client";
+import React,{useEffect} from 'react'
 import Navigation from '../components/NavBar/Nav'
 import 'bootstrap/dist/css/bootstrap.css';
 import AI from '../assets/AI.jpg'
@@ -6,8 +7,22 @@ import ava from '../assets/avatar.jpg'
 import '../styles/blogs.css';
 import Image from "next/image";
 import "../styles/MyHome.css"
+//import { useRouter } from 'next/navigation'
 
 function BlogAI() {
+    //const router = useRouter();
+    (function() {
+
+        if (window.history && window.history.pushState) {
+    
+            $(window).on('popstate', function() {
+          
+              //alert('Back button was pressed.');
+              window.location.reload()
+            });
+        }
+    })();
+    
   return (
     <div>
       <div className='App'>
