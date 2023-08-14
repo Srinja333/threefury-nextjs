@@ -1,21 +1,31 @@
-import React from 'react'
+"use client"; 
+// import React from 'react'
+import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.css';
-import image1 from '../../../assets/blog1.png'
-import image2 from '../../../assets/blog2.png'
-import image3 from '../../../assets/blog3.png'
-import ava from '../../../assets/avatar.jpg'
-import ava1 from '../../../assets/avatar2.jpg'
-import ava2 from '../../../assets/avatar3.jpg'
-import {useNavigate } from 'react-router-dom';
-
+import image1 from '../assets/blog1.png'
+import image2 from '../assets/blog2.png'
+import image3 from '../assets/blog3.png'
+import ava from '../assets/avatar.jpg'
+import ava1 from '../assets/avatar2.jpg'
+import ava2 from '../assets/avatar3.jpg'
+//import {Link, useNavigate } from 'react-router-dom';
+// import Link from "next/link";
+import { useRouter } from 'next/navigation'
+//import BlogAI from "../../../blogai";
 
 
 function BlogAIHome() {
-    const navigate = useNavigate();
-    const handleClickAI = () => navigate('/blogAI');
-    const handleClickMicroservice = () => navigate('/blogMicroservices');
-    const handleClickChandrayaan = () => navigate('/blogChandrayaan');
-
+    const router = useRouter();
+    const handleClickAI = () => {
+        router.push('/blogAI')
+    }
+    const handleClickChandrayaan=()=>{
+        router.push('/blogChandrayaan')
+    }
+    const handleClickMicroservice=()=>{
+        router.push('/blogMicroservices')
+    }
+   
   return (
     <>
         <section className="bg-light" style={{marginTop:"8rem"}} id="blog">
@@ -36,7 +46,7 @@ function BlogAIHome() {
          {/* <!--News Item--> */} 
             <div className="col-lg-4">
                 <div className="news-item">
-                    <img alt="image" className="news-img" src={image1} />
+                    <Image alt="image" height={215.328} width={323} src={image1} />
                     <div className="news-text-box">
                         <span className="date main-color">October 29, 2020</span>
                         
@@ -47,42 +57,43 @@ function BlogAIHome() {
                         
                         <p className="para">OpenAI is a research organization that focuses on the development of artificial intelligence...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
-                            <img alt="image" className="author-img bg-blue" src={ava}/>
+                            <Image alt="image" className="bg-blue" height={55} width={50} src={ava}/>
                             <h5 className="author-name">Hena Sword</h5>
                         </a>
-                        <button className='effect effect-1' onClick={handleClickAI}> Learn more </button>
+                        <button className='effect effect-1' onClick={(e)=>handleClickAI()}> Learn more </button>
+                        {/* <Link href='/blogAI'>learn</Link> */}
                     </div>
                 </div>
             </div>
             {/* <!--News Item--> */}
             <div className="col-lg-4">
                 <div className="news-item">
-                    <img alt="image" className="news-img" src={image2} />
+                    <Image alt="image" height={215.328} width={323} src={image2} />
                     <div className="news-text-box">
                         <span className="date main-color">October 29, 2020</span>
                         <h4 className="news-title">Top 10 Microservices Design</h4>
                         <p className="para">The developers should know what Microservice is and why the Microservice architecture arises...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
-                            <img alt="image" className="author-img bg-purple" src={ava1}/>
+                            <Image alt="image" height={55} width={50}className="bg-purple" src={ava1}/>
                             <h5 className="author-name">Charlotte Kemi</h5>
                         </a>
-                        <button className='effect effect-1' onClick={handleClickMicroservice}> Learn more </button>
+                        <button className='effect effect-1' onClick={(e)=>handleClickMicroservice()}> Learn more </button>
                     </div>
                 </div>
             </div>
             {/* <!--News Item--> */}
             <div className="col-lg-4">
                 <div className="news-item">
-                    <img alt="image" className="news-img" src={image3}/>
+                    <Image alt="image" height={215.328} width={323} src={image3}/>
                     <div className="news-text-box">
                         <span className="date main-color">October 29, 2020</span>
-                        <h4 className="news-title">Chandrayaan 3 Mission</h4>
+                        <h4 className="news-title">Chandrayaan 3 Mission Blog</h4>
                         <p className="para">Chandrayaan-3, India’s third lunar exploration mission was launched on Friday, in the fourth...</p>
                         <a className="author d-flex align-items-center" href="javascript:void(0);">
-                            <img  alt="image" className="author-img bg-pink" src={ava2}/>
+                            <Image height={55} width={50} alt="image" className="bg-pink" src={ava2}/>
                             <h5 className="author-name">Emily Villas</h5>
                         </a>
-                        <button className='effect effect-1' onClick={handleClickChandrayaan}> Learn more </button>
+                        <button className='effect effect-1' onClick={(e)=>handleClickChandrayaan()}> Learn more </button>
                     </div>
                 </div>
             </div>

@@ -1,16 +1,23 @@
-import React from 'react';
+"use client";
+//import React from 'react';
 import './OurProject.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import pic1 from './projects/project1.webp';
-import pic2 from './projects/project2.png';
-import pic3 from './projects/projectS1.jpeg';
-import pic4 from './projects/projectS2.jpeg';
-import pic5 from './projects/projectT1.png';
-import pic6 from './projects/projectT2.png';
-
+// import 'bootstrap/dist/js/bootstrap.min.js';
+import pic1 from '../../assets/project1.webp';
+import pic2 from '../../assets/project2.png';
+import pic3 from '../../assets/projectS1.jpeg';
+import pic4 from '../../assets/projectS2.jpeg';
+import pic5 from '../../assets/projectT1.png';
+import pic6 from '../../assets/projectT2.png';
+import { useEffect } from "react";
+import Image from "next/image";
 
 const OurProject = () => {
+    
+useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
+  
   return (
     <div className='container' id='ourWork'>
         <div className="container col-md-6 lm-3 textS textH">
@@ -29,37 +36,37 @@ const OurProject = () => {
                 </div>
                 <div className="ttext carousel-inner">
                     <div className="carousel-item active">
-                        <img src={pic1} className="d-block w-100" alt="" />
+                        <Image src={pic1} width={720} height={341.625} alt="" layout='fixed'/>
                         <div className="carousel-caption d-md-block t_color">
                             <h5>College website</h5>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={pic2} className="d-block w-100" alt="" />
+                        <Image src={pic2} width={720} height={341.625} alt="" layout='fixed' />
                         <div className="carousel-caption  d-md-block t_color">
                             <h5>Learning Management System</h5>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={pic3} className="d-block w-100" alt="" />
+                        <Image src={pic3} width={720} height={341.625} alt="" layout='fixed'/>
                         <div className="carousel-caption  d-md-block t_color">
                             <h5>Ecommerce book store</h5>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={pic4} className="d-block w-100" alt="" />
+                        <Image src={pic4} width={720} height={341.625} alt="" layout='fixed'/>
                         <div className="carousel-caption  d-md-block t_color">
                             <h5>Live Chat app</h5>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={pic5} className="d-block w-100" alt="" />
+                        <Image src={pic5} width={720} height={341.625} alt=""  layout="fixed"/>
                         <div className="carousel-caption  d-md-block t_color">
                             <h5>Travel Website</h5>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={pic6} className="d-block w-100" alt="" />
+                        <Image src={pic6} width={720} height={341.625} alt=""  layout="fixed" />
                         <div className="carousel-caption  d-md-block t_color">
                             <h5>Fashion Website</h5>
                         </div>

@@ -1,14 +1,11 @@
-import Link from "next/link"
-import Home from "./components/pages/Home/MyHome";
-
+import Home from "./home/page";
+import './styles/MyHome.css'
 
 const Page = () => {
   return (
-      // <div className="App">
-      // <Link href="/"> 
-       <Home/>
-      // </Link>
-      // </div>
+      <div className="App">
+        <Home/>
+      </div> 
   );
 };
 

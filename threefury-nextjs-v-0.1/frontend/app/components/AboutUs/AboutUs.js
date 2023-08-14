@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import "./AboutUs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,19 +13,25 @@ import {
 import {
   faTwitter,
   faFacebook,
-  faLinkedin, 
+  faLinkedin,
   faGithub,
-  faAndroid
-} from '@fortawesome/free-brands-svg-icons'
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import techyBoy from "../../../assets/techy-boy.avif";
-import Srinj33 from '../../../assets/srinjay.png'
-import { height, width } from '@mui/system';
-import Shub0924 from '../../../assets/Shubhjeet.png'
-import mycode247 from '../../../assets/Tanmoy.png'
-  
+  faAndroid,
+} from "@fortawesome/free-brands-svg-icons";
+import techyBoy from "../../assets/techy-boy.png";
+import Image from "next/image";
+var $ = require("jquery");
+if (typeof window !== "undefined") {
+  // Client-side-only code
+  window.$ = window.jQuery = require("jquery");
+}
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
+// import Srinj33 from '../../../assets/srinjay.png'
+//import { height, width } from '@mui/system';
+// import Shub0924 from '../../../assets/Shubhjeet.png'
+// import mycode247 from '../../../assets/Tanmoy.png'
 
 function AboutUs() {
   const options = {
@@ -36,6 +42,7 @@ function AboutUs() {
     autoplay: true,
     autoplayTimeout: 3000,
   };
+
   return (
     <>
       <div id="about">
@@ -65,16 +72,21 @@ function AboutUs() {
               </div>
               <div className="col-lg-6">
                 <div className="ms-lg-5 pt-4 mt-lg-0 pt-lg-0">
-                  <img style={{ width: "90%", height: "50%" }} src={techyBoy} />
+                  <Image
+                    width={391.5}
+                    height={260.812}
+                    src={techyBoy}
+                    layout="responsive"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section style={{ marginTop: "8rem", marginBottom: "8rem" }}>
+        <section className="sections">
           <div className="container">
             <h2>Our services</h2>
-            <p className="para mb-5">
+            <p className="mb-5">
               We offer various services to our clients which helps their
               business to grow online.
             </p>
@@ -116,96 +128,10 @@ function AboutUs() {
             </div>
           </div>
         </section>
-        {/* <section className="text-center mt-5">
+        <section className="sections">
           <div className="container">
             <div className="row">
-              <div className="col-md-12">
-                <div className="heading-area mx-570 mb-5">
-                  <span className="sub-title">We are techfury company</span>
-                  <h2 className="title">We have some talented staff</h2>
-                  <p className="para">
-                  Our dynamic team combines top-notch frontend, backend, and design skills,<br/> 
-                  collaborating seamlessly to create cutting-edge digital solutions with a perfect blend of functionality, 
-                  aesthetics, and user experience.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-4">
-                <div className="team-item">
-                  <img
-                    alt="image"
-                    className="team-image"
-                    src={Srinj33}
-                  />
-                  <div className="name">
-                    <h6>Srinjay Kapri</h6>
-                  </div>
-
-                <p className="designation mb-2">Director</p>
-                <a href='https://www.facebook.com/profile.php?id=100016105536565' target='_blank'>
-                <FontAwesomeIcon icon={faFacebook} /></a>
-                <a href='https://www.linkedin.com/in/srinjaykapri/' target='_blank'>
-                 <FontAwesomeIcon className="ms-2  me-2" icon={faLinkedin} /></a>
-                 <a href='https://github.com/srinja333' target='_blank'>
-                 <FontAwesomeIcon icon={faGithub} /></a>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="team-item">
-                <img
-                  alt="image"
-                  className="team-image"
-                  src={mycode247}
-                />
-                <div className="name">
-                  <h6>Tanmoy Khanta</h6>
-                </div>
-                <p className="designation mb-2">Director</p>
-                <div className="team-social social-icon-bg-hvr">
-                <a href='https://www.facebook.com/tanmoy.khanta.3?mibextid=ZbWKwL' target='_blank'>  
-                <FontAwesomeIcon icon={faFacebook}/></a>
-                <a href='https://www.linkedin.com/in/tanmoy-khanta/' target='_blank'> 
-                 <FontAwesomeIcon className="ms-2  me-2" icon={faLinkedin} /></a>
-                 <a href='https://github.com/mycode247' target='_blank'> 
-                 <FontAwesomeIcon icon={faGithub} /></a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="team-item">
-                <img
-                  alt="image"
-                  className="team-image"
-                  src={Shub0924}
-                />
-                <div className="name">
-                  <h6>Shubhjeet Paul</h6>
-                </div>
-                <p className="designation mb-2">Director</p>
-                <div className="social-icon-bg-hvr">
-                <a href='https://www.facebook.com/shubhjeet.paulom/' target='_blank'>
-                <FontAwesomeIcon icon={faFacebook} /></a>
-                <a href='https://www.linkedin.com/in/shubhjeet-paul/' target='_blank'>
-                 <FontAwesomeIcon className="ms-2  me-2" icon={faLinkedin}/></a>
-                 <a href='https://github.com/SHUBH0924' target='_blank'>
-                 <FontAwesomeIcon icon={faGithub} href=''/></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-        <section style={{ marginTop: "8rem", marginBottom: "8rem" }}>
-          <div className="container">
-            <div className="row">
-              <div
-                className="col-md-12"
-                style={{
-                  marginLeft: "13%",
-                }}
-              >
+              <div className="col-md-12 owl-carousel-part">
                 <OwlCarousel {...options}>
                   <div className="owlItem">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />

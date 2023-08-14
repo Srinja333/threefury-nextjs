@@ -1,7 +1,9 @@
+"use client";
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import logo from '../assets/logoF.png';
+import logo from '../../assets/logoF.png';
 import 'font-awesome/css/font-awesome.min.css';
+import '../../styles/MyHome.css'
 // import Home from './pages/Home';
 // import AboutUs from './pages/AboutUs/AboutUs';
 

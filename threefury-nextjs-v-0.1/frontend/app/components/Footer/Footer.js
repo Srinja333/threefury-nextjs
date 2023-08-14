@@ -1,11 +1,12 @@
-import React from 'react';
+//import React from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import './Footer.css';
-import logo from './logoF.png';
+import logo from '../../assets/logoF.png';
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -15,9 +16,10 @@ const Footer = () => {
             <p>Book a free consultancy, let's your business take to a next step!</p>
             <button className="btn btn-outline-light" onClick={() => window.location.replace("/#modal-contact-form-data")}>Get Started</button>
         </div>
+       
         <div className="foot-sec ">
             <div className="footer-ogo">
-                <img src={logo} className='logo-img' alt="ThreeFury" />
+                <Image src={logo} width={180} height={50} alt="ThreeFury"/>
                 <p>Our vision is to grow your business digitally!</p>
                 <div className='foot-icon'>
                <a target="_blank" href="https://www.facebook.com/profile.php?id=100095408325331&mibextid=ZbWKwL"><FacebookIcon className='footer-icon'/></a>

@@ -1,10 +1,10 @@
 import React from 'react'
-import Navigation from '../../navbar'
+import Navigation from '../components/NavBar/Nav'
 import 'bootstrap/dist/css/bootstrap.css';
-import icon from '../../../assets/Microservices.png'
-import '../Blogs/blogs.css';
-import ava from '../../../assets/avatar2.jpg'
-
+import icon from '../assets/Microservices.png'
+import '../styles/blogs.css';
+import ava from '../assets/avatar2.jpg'
+import Image from "next/image";
 
 
 function blog1() {
@@ -17,7 +17,7 @@ function blog1() {
                 <div class="col-lg-8 m-15px-tb">
                     <article class="article">
                         <div class="article-img">
-                            <img src={icon} title="" alt=""/>
+                            <Image src={icon} title="" alt=""/>
                         </div>
                         <div class="article-title">
                             <h2>Top 10 Microservices Design</h2>

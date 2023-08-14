@@ -1,18 +1,20 @@
 "use client"; 
 import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import Nav from "../../Nav";
+import Nav from "../components/NavBar/Nav";
 // import Navigation from "../../navbar";
-import icon from "../../../assets/contact-us-customer-support-concept-vector_prev_ui.png";
-// import BlogHome from "../Blogs/BlogHome";
-// import AboutUs from "../AboutUs/AboutUs";
+import {REACT_APP_API,REACT_APP_PUBLIC_KEY, REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID,REACT_APP_CUSTOMER_TEMPLATE_ID} from './constants'
+import icon from "../assets/contact-us-customer-support-concept-vector_prev_ui.png";
+import BlogHome from "../blogHome/page";
+import AboutUs from "../components/AboutUs/AboutUs";
 import emailjs from "@emailjs/browser";
-// import Footer from "../../Footer/Footer";
-// import OurProjects from "../../OurProject/OurProject";
+import Footer from "../components/Footer/Footer";
+import OurProjects from "../components/OurProject/OurProject";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import './MyHome.css'
+// import './MyHome.css'
 //import { text } from "@fortawesome/fontawesome-svg-core";
+import Image from "next/image";
 
 function Home() {
   const [name, setName] = useState("");
@@ -25,9 +27,9 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const timeout = 3000;
-  const API = process.env.REACT_APP_API;
+  const API = REACT_APP_API;
 
-  useEffect(() => emailjs.init(process.env.REACT_APP_PUBLIC_KEY), []);
+  useEffect(() => emailjs.init(REACT_APP_PUBLIC_KEY), []);
 
   useEffect(() => {
     if (loading == false && visible === true) {
@@ -58,20 +60,20 @@ function Home() {
   };
 
   const handleSubmit = async () => {
-    const serviceId = process.env.REACT_APP_SERVICE_ID;
-    const templateId = process.env.REACT_APP_TEMPLATE_ID;
-    const customerTemplateId = process.env.REACT_APP_CUSTOMER_TEMPLATE_ID;
+    const serviceId = REACT_APP_SERVICE_ID;
+    const templateId = REACT_APP_TEMPLATE_ID;
+    const customerTemplateId = REACT_APP_CUSTOMER_TEMPLATE_ID;
     try {
       setLoading(true);
-      await emailjs.send(serviceId, templateId, {
-        Name: name,
-        Email: email,
-        Contact: contact,
-        Address: address,
-        Company: companyName,
-        Message: message,
-        Type: type,
-      });
+      // await emailjs.send(serviceId, templateId, {
+      //   Name: name,
+      //   Email: email,
+      //   Contact: contact,
+      //   Address: address,
+      //   Company: companyName,
+      //   Message: message,
+      //   Type: type,
+      // });
       await emailjs.send(serviceId, customerTemplateId, {
         Name: name,
         Email: email,
@@ -159,7 +161,7 @@ function Home() {
                   {/* <p>
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
                     <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4> */}
-                    <img src={icon} alt="Image" className="ms-md-3 swing img-fluid ml-6 custom-img" />
+                    <Image src={icon} alt="Image" className="ms-md-3 swing img-fluid ml-6 custom-img"  />
                   {/* </p> */}
                 </div>
                 <div className="col-md-6 mb-19">
@@ -301,10 +303,10 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* {<AboutUs />}
-      {<OurProjects />}
+     {<AboutUs />}
+     {<OurProjects />}
       {<BlogHome />}
-      {<Footer />} */}
+      {<Footer />}
     </div>
   );
 }
