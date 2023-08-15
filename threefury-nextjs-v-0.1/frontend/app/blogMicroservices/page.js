@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navigation from '../components/NavBar/Nav'
 import 'bootstrap/dist/css/bootstrap.css';
 import icon from '../assets/Microservices.png'
@@ -8,8 +8,9 @@ import ava from '../assets/avatar2.jpg'
 import Image from "next/image";
 import "../styles/MyHome.css"
 
-function blog1() {
-    (function() {
+function BlogMicroservices() {
+    if(typeof window !== 'undefined')
+    {
 
         if (window.history && window.history.pushState) {
     
@@ -19,7 +20,7 @@ function blog1() {
               window.location.reload()
             });
         }
-    })();
+    }
   return (
     <div>
     <div className='App'>
@@ -221,4 +222,4 @@ We use Jenkins pipelines for automated deployment and also used tools like Terra
   )
 }
 
-export default blog1
+export default BlogMicroservices

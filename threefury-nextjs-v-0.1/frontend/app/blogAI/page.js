@@ -10,8 +10,8 @@ import "../styles/MyHome.css"
 //import { useRouter } from 'next/navigation'
 
 function BlogAI() {
-    //const router = useRouter();
-    (function() {
+    if(typeof window !== 'undefined')
+    {
 
         if (window.history && window.history.pushState) {
     
@@ -21,7 +21,7 @@ function BlogAI() {
               window.location.reload()
             });
         }
-    })();
+    }
     
   return (
     <div>
