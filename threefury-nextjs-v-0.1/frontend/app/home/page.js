@@ -14,7 +14,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 // import './MyHome.css'
 //import { text } from "@fortawesome/fontawesome-svg-core";
-import Image from "next/legacy/image";
+import Image from "next/image";
 // import { useRouter } from 'next/navigation'
 
 function Home() {
@@ -142,7 +142,14 @@ function Home() {
                   {/* <p>
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
                     <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4> */}
-                    <Image src={icon} alt="ThreeFury image" className="ms-md-3 swing img-fluid ml-6 custom-img"  />
+                    <Image
+                      src={icon}
+                      alt="ThreeFury image"
+                      className="ms-md-3 swing img-fluid ml-6 custom-img"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto"
+                      }} />
                   {/* </p> */}
                 </div>
                 <div className="col-md-6 mb-19">

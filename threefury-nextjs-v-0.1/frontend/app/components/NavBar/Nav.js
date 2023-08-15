@@ -6,7 +6,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import '../../styles/MyHome.css';
 // import Home from './pages/Home';
 // import AboutUs from './pages/AboutUs/AboutUs';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 
 const Nav = () => {
@@ -26,7 +26,10 @@ const Nav = () => {
       width={180}
       height={50}
       alt="Picture of the author"
- />
+      style={{
+        maxWidth: "100%",
+        height: "auto"
+      }} />
     </a>
     <button onClick={handleVisibility} className="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -57,7 +60,7 @@ const Nav = () => {
 </nav>
         </div>
     </div>
-  )
+  );
 }
 
 export default Nav
