@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import './Footer.css';
 import logo from '../../assets/logoF.png';
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Footer = () => {
   return (

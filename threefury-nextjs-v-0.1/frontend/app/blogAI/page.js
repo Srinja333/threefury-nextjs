@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import AI from '../assets/AI.jpg'
 import ava from '../assets/avatar.jpg'
 import '../styles/blogs.css';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import "../styles/MyHome.css"
 //import { useRouter } from 'next/navigation'
 

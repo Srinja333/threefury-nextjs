@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import icon from '../assets/Microservices.png'
 import '../styles/blogs.css';
 import ava from '../assets/avatar2.jpg'
-import Image from "next/image";
+import Image from "next/legacy/image";
 import "../styles/MyHome.css"
 
 function BlogMicroservices() {

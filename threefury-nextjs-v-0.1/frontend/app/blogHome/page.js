@@ -1,6 +1,6 @@
 "use client"; 
 // import React from 'react'
-import Image from "next/image";
+import Image from "next/legacy/image";
 import 'bootstrap/dist/css/bootstrap.css';
 import image1 from '../assets/blog1.png'
 import image2 from '../assets/blog2.png'

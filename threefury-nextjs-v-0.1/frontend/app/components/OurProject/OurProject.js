@@ -10,7 +10,7 @@ import pic4 from '../../assets/projectS2.jpeg';
 import pic5 from '../../assets/projectT1.png';
 import pic6 from '../../assets/projectT2.png';
 import { useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const OurProject = () => {
     

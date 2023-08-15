@@ -19,7 +19,7 @@ import {
   faAndroid,
 } from "@fortawesome/free-brands-svg-icons";
 import techyBoy from "../../assets/techy-boy.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 var $ = require("jquery");
 if (typeof window !== "undefined") {
   // Client-side-only code

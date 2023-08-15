@@ -14,7 +14,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 // import './MyHome.css'
 //import { text } from "@fortawesome/fontawesome-svg-core";
-import Image from "next/image";
+import Image from "next/legacy/image";
 // import { useRouter } from 'next/navigation'
 
 function Home() {

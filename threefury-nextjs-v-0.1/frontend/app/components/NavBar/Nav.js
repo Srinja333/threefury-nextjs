@@ -6,7 +6,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import '../../styles/MyHome.css';
 // import Home from './pages/Home';
 // import AboutUs from './pages/AboutUs/AboutUs';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 const Nav = () => {
