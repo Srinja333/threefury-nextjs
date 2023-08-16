@@ -15,9 +15,13 @@ import PhoneInput from "react-phone-number-input";
 // import './MyHome.css'
 //import { text } from "@fortawesome/fontawesome-svg-core";
 import Image from "next/image";
-// import { useRouter } from 'next/navigation'
+//import { useRouter } from 'next/navigation'
+// const imageLoader = ({ src, width, quality }) => {
+//   return `https://res.cloudinary.com/dh6pohbrn/image/upload/v1692116130/${src}?w=${width}&q=${quality || 75}`
+// }
 
 function Home() {
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
@@ -29,7 +33,8 @@ function Home() {
   const [visible, setVisible] = useState(false);
   const timeout = 3000;
   const API = REACT_APP_API;
-  // const router = useRouter();
+  //const router = useRouter();
+  //console.log("home",router)
   // useEffect(()=>{
   //  router.push('/')
   // },[])
@@ -142,14 +147,9 @@ function Home() {
                   {/* <p>
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
                     <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4> */}
-                    <Image
-                      src={icon}
-                      alt="ThreeFury image"
-                      className="ms-md-3 swing img-fluid ml-6 custom-img"
-                      style={{
-                        maxWidth: "100%",
-                        height: "auto"
-                      }} />
+                    <div className="ms-md-3 swing img-fluid ml-6 custom-img">
+                    <Image  width={400} height={400}  src='contact-us-customer-support-concept-vector_prev_ui_s9delt.png' alt="lady image"   />
+                    </div>
                   {/* </p> */}
                 </div>
                 <div className="col-md-6 mb-19">

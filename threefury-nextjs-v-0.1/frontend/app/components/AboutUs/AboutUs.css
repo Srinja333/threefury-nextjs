@@ -118,9 +118,9 @@
   position: relative;
 }
 
-.owlItem{
-width:25%
-}
+/* .owlItem{
+width:45%
+} */
 
 .sections{
    margin-top: 8rem;
@@ -128,9 +128,14 @@ width:25%
 }
 
 .owl-carousel-part{
-  margin-left: 13%;
+  margin-left: 10%;
 }
 
+@media (max-width: 768px) {
+.owl-carousel-part{
+  margin-left: 9%;
+}
+}
 
 
  

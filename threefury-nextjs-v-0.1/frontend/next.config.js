@@ -1,7 +1,14 @@
 /** @type {import('next'). NextConfig} */
 const webpack = require("webpack");
 const nextConfig = {
-reactStrictMode: true,
+//reactStrictMode: true,
+distDir: 'dist',
+output: 'export',
+images: {
+  loader: 'custom',
+  loaderFile: './my-loader.js',
+},
+//output: 'export',
 webpack: (config, {buildId, dev, isServer, defaultLoaders, webpack }) =>
 {
 config.plugins.push(

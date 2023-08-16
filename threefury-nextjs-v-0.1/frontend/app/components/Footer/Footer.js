@@ -7,7 +7,10 @@ import EmailIcon from '@mui/icons-material/Email';
 import './Footer.css';
 import logo from '../../assets/logoF.png';
 import Image from "next/image";
-
+// const imageLoader = ({ src, width, quality }) => {
+//     return `https://res.cloudinary.com/dh6pohbrn/image/upload/v1692116130/${src}?w=${width}&q=${quality || 75}`
+//   }
+  
 const Footer = () => {
   return (
       <div className='container'>
@@ -20,7 +23,8 @@ const Footer = () => {
           <div className="foot-sec ">
               <div className="footer-ogo">
                   <Image
-                      src={logo}
+                      //loader={imageLoader}
+                      src='logoF_xhvusz.png'
                       width={180}
                       height={50}
                       alt="ThreeFury"
