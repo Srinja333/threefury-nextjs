@@ -11,11 +11,11 @@ import pic5 from "../../assets/projectT1.png";
 import pic6 from "../../assets/projectT2.png";
 import { useEffect } from "react";
 import Image from "next/image";
-const imageLoader = ({ src, width, quality }) => {
-  return `https://res.cloudinary.com/dh6pohbrn/image/upload/v1692116130/${src}?w=${width}&q=${
-    quality || 75
-  }`;
-};
+// const imageLoader = ({ src, width, quality }) => {
+//   return `https://res.cloudinary.com/dh6pohbrn/image/upload/v1692116130/${src}?w=${width}&q=${
+//     quality || 75
+//   }`;
+// };
 
 const OurProject = () => {
   useEffect(() => {
@@ -84,7 +84,9 @@ const OurProject = () => {
           </div>
           <div className="ttext carousel-inner">
             <div className="carousel-item active">
-              <Image  loader={imageLoader} src='project1_frvido.webp' width={720} height={341.625} alt="" />
+              <Image 
+              // loader={imageLoader} 
+              src='project1_frvido.webp' width={720} height={360} alt="" layout="responsive" />
               <div className="carousel-caption d-md-block t_color">
                 <h5>College website</h5>
               </div>
@@ -92,7 +94,7 @@ const OurProject = () => {
             <div className="carousel-item">
               <Image 
               //loader={imageLoader} 
-              src='project2_xkkfx3.png' width={720} height={341.625} alt="" />
+              src='project2_xkkfx3.png'  width={720} height={360} alt="" layout="responsive"/>
               <div className="carousel-caption  d-md-block t_color">
                 <h5>Learning Management System</h5>
               </div>
@@ -100,7 +102,7 @@ const OurProject = () => {
             <div className="carousel-item">
               <Image 
               //loader={imageLoader} 
-              src='projectS1_h186ix.jpg' width={720} height={341.625} alt="" />
+              src='projectS1_h186ix.jpg'  width={720} height={360} alt="" layout="responsive"/>
               <div className="carousel-caption  d-md-block t_color">
                 <h5>Ecommerce book store</h5>
               </div>
@@ -108,7 +110,7 @@ const OurProject = () => {
             <div className="carousel-item">
               <Image 
               //loader={imageLoader} 
-              src='projectS2_cavknd.jpg' width={720} height={341.625} alt="" />
+              src='projectS2_cavknd.jpg'  width={720} height={360} alt="" layout="responsive"/>
               <div className="carousel-caption  d-md-block t_color">
                 <h5>Live Chat app</h5>
               </div>
@@ -116,7 +118,7 @@ const OurProject = () => {
             <div className="carousel-item">
               <Image 
               //loader={imageLoader} 
-              src='projectT1_jhut0b.png' width={720} height={341.625} alt="" />
+              src='projectT1_jhut0b.png'  width={720} height={360} alt="" layout="responsive"/>
               <div className="carousel-caption  d-md-block t_color">
                 <h5>Travel Website</h5>
               </div>
@@ -124,8 +126,8 @@ const OurProject = () => {
             <div className="carousel-item">
               <Image
               // loader={imageLoader} 
-              src='projectT2_hlbz6f.png' width={720} height={341.625} alt="" />
-              <div className="carousel-caption  d-md-block t_color">
+              src='projectT2_hlbz6f.png' width={720} height={360} alt="" layout="responsive"/>
+              <div className="carousel-caption  d-md-block">
                 <h5>Fashion Website</h5>
               </div>
             </div>
