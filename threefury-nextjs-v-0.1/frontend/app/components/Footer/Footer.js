@@ -39,6 +39,7 @@ const Footer = () => {
                  {/* <InstagramIcon className='footer-icon'/>*/}
              
                  <a  target="_blank" href="mailto:info@threefury.com"> <EmailIcon className='footer-icon'/></a>
+                 <a  target="_blank" href="https://www.instagram.com/threefury/"> <InstagramIcon className='footer-icon'/></a>
                   </div>
               </div>
           </div>
