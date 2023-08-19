@@ -148,7 +148,7 @@ function Home() {
                     <h6 className="title-heading"> India's Leading <i><b className="dev-title">Web Design</b></i>, <i><b className="dev-title">Development Company</b></i> and </h6>
                     <h4 className="title-heading" ><i> <b className="dev-title">Digital Solutions Provider</b></i> </h4> */}
                     <div className="ms-md-3 swing img-fluid ml-6 custom-img">
-                    <Image  width={400} height={400}  src='contact-us-customer-support-concept-vector_prev_ui_s9delt.png' alt="lady image"   />
+                    <Image  width={400} height={400}  src='contact-us-customer-support-concept-vector_prev_ui_s9delt.png' alt="lady image" layout="responsive"   />
                     </div>
                   {/* </p> */}
                 </div>
@@ -208,7 +208,7 @@ function Home() {
                       <div className="col-md-6">
                         <div className="form-group">
                           <input
-                            className="form-control mt-lg-0 mt-4"
+                            className="form-control mt-lg-0 mt-md-0 mt-4"
                             id="quote_email"
                             name="userEmail"
                             placeholder="Email"
