@@ -123,7 +123,7 @@ function AboutUs() {
                   <span className="pro-step purple">
                     <FontAwesomeIcon icon={faMagnifyingGlassChart} />
                   </span>
-                  <h4 className="service-heading">SEO And Digital Marketing</h4>
+                  <h4 className="service-heading">SEO & Digital Marketing</h4>
                 </div>
               </div>
               <div className="col-md-3">
@@ -132,7 +132,7 @@ function AboutUs() {
                     <FontAwesomeIcon icon={faVideo} />
                   </span>
                   <h4 className="service-heading">
-                    Video Editing And Graphic Design
+                    Video Editing & Graphic Design
                   </h4>
                 </div>
               </div>
